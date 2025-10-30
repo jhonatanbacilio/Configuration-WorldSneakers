@@ -1,5 +1,25 @@
+server:
+  port: 8083
+  
 spring:
-  application:
-    name: configuration
-
-message: Bienvenido al servidor central de configuración de WorldSneakers
+  aplication:
+    name: Configuration
+  cloud:
+    config:
+      server:
+        git:
+          default-label: main
+          uri:  
+          skipSsValidation: true
+          clone-on-start: true
+          
+management:
+  endpoints:
+    web:
+      exposure:
+        include:*
+        
+eureka:
+  client:
+    serviceUrl:
+      defaultzone: http://localhost:8761/eureka/
