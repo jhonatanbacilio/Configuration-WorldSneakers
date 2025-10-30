@@ -1,25 +1,25 @@
 server:
   port: 8083
-  
+
 spring:
-  aplication:
+  application:
     name: Configuration
   cloud:
     config:
       server:
         git:
+          uri: https://github.com/jhonatanbacilio/Configuration-WorldSneakers.git
           default-label: main
-          uri:  
-          skipSsValidation: true
+          skip-ssl-validation: true
           clone-on-start: true
-          
+
 management:
   endpoints:
     web:
       exposure:
-        include:*
-        
+        include: "*"
+
 eureka:
   client:
     serviceUrl:
-      defaultzone: http://localhost:8761/eureka/
+      defaultZone: http://localhost:8761/eureka/
