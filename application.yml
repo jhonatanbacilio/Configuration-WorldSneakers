@@ -1,0 +1,5 @@
+spring:
+  application:
+    name: configuration
+
+message: Bienvenido al servidor central de configuración de WorldSneakers
